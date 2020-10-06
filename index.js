@@ -18,12 +18,11 @@ Do the following:
    HINT: no function required
 */
 let votingAge = 18;
-  if (votingAge >= 18){
-    console.log(true);
-  }else{
-    console.log(false);
-  }
-
+if (votingAge >= 18) {
+	console.log(true);
+} else {
+	console.log(false);
+}
 
 /*
 Task 1b - Values
@@ -40,9 +39,6 @@ let lastName = "Oladuwa";
 
 firstName = "Bob";
 
-
-
-
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -55,8 +51,7 @@ Do the following:
 */
 
 let x = "1999";
-  console.log(x.toString());
-
+console.log(x.toString());
 
 /*
 Task 1d - Multiply
@@ -67,11 +62,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;    
+function multiply(num1, num2) {
+	return num1 * num2;
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -83,11 +76,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(age){
-  return age * 7;  
+function dogYears(age) {
+	return age * 7;
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -114,26 +105,26 @@ Use the hungryDog function and feeding requirements below to do the following:
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
 function hungryDog(weight, age) {
-  if (age >=0.1667 && age < 0.3333){
-    return weight * 0.10;
-  }else if (age >= 0.3333 && age < 0.58) {
-    return weight * 0.05;
-  }else if (age >= 0.58 && age <= 0.58) {
-    return weight * 0.04;
-  } else if (age >= 1 && weight <= 5) {
-    return weight * 0.05;
-  } else if (age >=1 && weight <= 10) {
-    return weight * 0.04;
-  } else if (age >= 1 && weight <= 15) {
-    return weight * 0.03;
-  } else if (age >=1 && weight > 15) {
-    return weight * 0.02;
-  }else {
-    return "That is an invalid selection"
-  }
+	if (age >= 0.1667 && age < 0.3333) {
+		return weight * 0.1;
+	} else if (age >= 0.3333 && age < 0.58) {
+		return weight * 0.05;
+	} else if (age >= 0.58 && age <= 0.58) {
+		return weight * 0.04;
+	} else if (age >= 1 && weight <= 5) {
+		return weight * 0.05;
+	} else if (age >= 1 && weight <= 10) {
+		return weight * 0.04;
+	} else if (age >= 1 && weight <= 15) {
+		return weight * 0.03;
+	} else if (age >= 1 && weight > 15) {
+		return weight * 0.02;
+	} else {
+		return "That is an invalid selection";
+	}
 }
 hungryDog(15, 1);
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -150,28 +141,26 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(userChoice){
-    let userInput;
-    let cpu = Math.floor(Math.random());
-    if (userInput === cpu) {
-      return "It's a tie";
-    } else if (userInput === 0 && cpu === 1){
-      return "You win!";
-    } else if (userInput === 1 && cpu === 2) {
-      return "You win!";
-    } else if (userInput === 2 && cpu === 0) {
-      return "You win!";
-    } else {
-      return "Invalid choice!"
-    }
+function game(userInput, cpuInput) {
+	let cpu = Math.floor(Math.random() * 3);
+	if (userInput === cpu) {
+		return "It's a tie";
+	} else if (userInput === 0 && cpu === 1) {
+		return "you win!";
+	} else if (userInput === 1 && cpu === 2) {
+		return "you win!";
+	} else if (userInput === 2 && cpu === 0) {
+		return "you win!";
+	} else {
+		return "you lose!";
+	}
 }
-  game(1);
-  
+game(1);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Metric Converter 
-//Task 5a - KM to Miles 
+//Metric Converter
+//Task 5a - KM to Miles
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
@@ -179,11 +168,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(kilometers){
-    return kilometers * 0.621371;
-  }
-
-
+function miles(kilometers) {
+	return kilometers * 0.621371;
+}
 
 //Task 5b - Feet to CM
 /*
@@ -193,11 +180,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
-
+function feet(cm) {
+	return cm / 30.48;
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -209,10 +194,13 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
-
+function annoyingSong() {
+	for (let i = 5; i > 0; i--) {
+		return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${
+			i - 1
+		} bottles of soda on the wall`;
+	}
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -228,14 +216,22 @@ Using the grade function below do the following:
    60-69 =  D 
    below 60 = F
 */
-  
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
-  
-  
-  
-  
+
+function grade(score) {
+	if (score >= 90 && score <= 100) {
+		return "you got an A";
+	} else if (score >= 80 && score < 90) {
+		return "you got a B";
+	} else if (score >= 70 && score < 80) {
+		return "you got a C";
+	} else if (score >= 60 && score < 70) {
+		return "you got a D";
+	} else if (score < 60) {
+		return "you got a F";
+	} else {
+		return "Not a valid score";
+	}
+}
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -249,27 +245,24 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(param) {
+	vowelCounter.includes();
 }
-
-
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    console.log('its working');
-    return 'bar';
+function foo() {
+	console.log("its working");
+	return "bar";
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+export default {
+	foo,
+	multiply,
+	dogYears,
+	hungryDog,
+	game,
+	miles,
+	feet,
+	annoyingSong,
+	grade,
+};
