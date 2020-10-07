@@ -112,7 +112,7 @@ function hungryDog(weight, age) {
 		return weight * 0.1;
 	} else if (age >= 0.3333 && age < 0.58) {
 		return weight * 0.05;
-	} else if (age >= 0.58 && age <= 0.58) {
+	} else if (age >= 0.58 && age < 1) {
 		return weight * 0.04;
 	} else if (age >= 1 && weight <= 5) {
 		return weight * 0.05;
@@ -141,33 +141,37 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(cpu, user) {
-	let cpuInput = Math.floor(Math.random() * 3);
-	cpuInput = "cpu";
-	if (cpuInput === 0) {
-		return "rock";
-	}
-	if (cpuInput === 1) {
-		return "scissors";
-	}
-	if (cpuInput === 2) {
-		return "paper";
-	}
 
-	if (user === cpu) {
-		return "it's a tie";
-	} else if (user === "rock" && cpu === "scissors") {
-		return "you win!";
-	} else if (user === "scissors" && cpu === "paper") {
-		return "you win!";
-	} else if (user === "paper" && cpu === "rock") {
-		return "you win!";
-	} else {
-		return "you lose!";
-	}
+let computer = Math.floor(Math.random() * 3);
+
+if (computer === 0) {
+  computer = "rock";
+}
+else if (computer === 1) {
+  computer = "scissors";
+}
+else {
+  computer = "paper";
+}
+function game(computer, user) {
+
+if (user === computer) {
+  return "it's a tie";
+  
+} else if (user === "rock" && computer === "scissors") {
+  return "you win!";
+  
+} else if (user === "scissors" && computer === "paper") {
+  return "you win!";
+  
+} if (user === "paper" && computer === "rock") {
+  return "you win!";
+} else {
+  return "you lose!";
+}
 }
 
-game("", "rock");
+game(computer, "rock");
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
