@@ -141,21 +141,33 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(userInput, cpuInput) {
-	let cpu = Math.floor(Math.random() * 3);
-	if (userInput === cpu) {
-		return "It's a tie";
-	} else if (userInput === 0 && cpu === 1) {
+function game(cpu, user) {
+	let cpuInput = Math.floor(Math.random() * 3);
+	cpuInput = "cpu";
+	if (cpuInput === 0) {
+		return "rock";
+	}
+	if (cpuInput === 1) {
+		return "scissors";
+	}
+	if (cpuInput === 2) {
+		return "paper";
+	}
+
+	if (user === cpu) {
+		return "it's a tie";
+	} else if (user === "rock" && cpu === "scissors") {
 		return "you win!";
-	} else if (userInput === 1 && cpu === 2) {
+	} else if (user === "scissors" && cpu === "paper") {
 		return "you win!";
-	} else if (userInput === 2 && cpu === 0) {
+	} else if (user === "paper" && cpu === "rock") {
 		return "you win!";
 	} else {
 		return "you lose!";
 	}
 }
-game(1);
+
+game("", "rock");
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
