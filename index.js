@@ -150,9 +150,10 @@ if (computer === 0) {
 else if (computer === 1) {
   computer = "scissors";
 }
-else {
+else if (computer === 2) {
   computer = "paper";
 }
+
 function game(computer, user) {
 
 if (user === computer) {
@@ -161,17 +162,18 @@ if (user === computer) {
 } else if (user === "rock" && computer === "scissors") {
   return "you win!";
   
-} else if (user === "scissors" && computer === "paper") {
+} else if (user === "paper" && computer === "paper") {
   return "you win!";
   
-} if (user === "paper" && computer === "rock") {
+} if (user === "scissors" && computer === "rock") {
   return "you win!";
+
 } else {
   return "you lose!";
 }
 }
 
-game(computer, "rock");
+game(computer, "paper");
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
